@@ -1,0 +1,80 @@
+:root{
+    --Color-Logotipo: #efdb64;
+    --Color-Letras: #181607;
+}
+
+@media(min-width: 768px){
+
+    .Navegation-Little{
+        display: none;
+    }
+
+    /* Encabezado - <header> */
+
+    .Encabezado{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: var(--Color-Logotipo);
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .Encabezado a{
+        display: flex;
+        align-items: center;
+    }
+
+    .Encabezado .Logotipo i, p{
+        font-size: 10.6px;
+        color: var(--Color-Letras);
+    }
+
+    .Encabezado .Navegation-Big ul{
+        display: flex;
+        align-items: center;
+    }
+
+    .Navegation-Big .List-Navegation-Big li{
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+    }
+
+    .List-Navegation-Big .Lists-Navegation-Big a, i{
+        font-size: 10.6px;
+        color: black;
+    }
+
+}
+
+@media(max-width: 767px){
+
+    .Navegation-Big{
+        display: none;
+    }
+
+    /* Encabezado - <header> */
+
+    .Encabezado{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background: var(--Color-Logotipo);
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .Encabezado a{
+        display: flex;
+        align-items: center;
+    }
+
+    .Encabezado .Logotipo i, p{
+        margin-left: 7px;
+        color: var(--Color-Letras);
+    }
+
+}
