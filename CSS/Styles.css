@@ -1,6 +1,9 @@
 :root{
-    --Color-Logotipo: #efdb64;
+    --Color-Logotipo: #ffd125;
     --Color-Letras: #181607;
+    --Color-Enlaces: #003def;
+    --Color-Menu: #c761f3;
+    --Color-MenuMenosFuerte: #ffa2fd;
 }
 
 @media(min-width: 768px){
@@ -27,9 +30,13 @@
         align-items: center;
     }
 
-    .Encabezado .Logotipo i, p{
+    .Encabezado .Logotipo p{
         font-size: 10.6px;
         color: var(--Color-Letras);
+    }
+
+    .Encabezado .Logotipo i{
+        font-size: 10.6px;
     }
 
     .Encabezado .Navegation-Big ul{
@@ -48,6 +55,49 @@
         color: black;
     }
 
+    /* Menú - <main> */
+
+    .Menu{
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background: var(--Color-Menu);
+    }
+
+    /* Pie de Página - <footer> */
+
+    .PieDePagina{
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background: var(--Color-Letras);
+    }
+
+    .PieDePagina .CopyRight small{
+        font-size: 10.6px;
+        color: var(--Color-Logotipo);
+    }
+
+    .Redes-Sociales .Invitacion-RedesSociales small{
+        font-size: 10.6px;
+        color: var(--Color-Logotipo);
+    }
+
+    .Redes-Sociales .Links-RedSocial{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Links-RedSocial .Logo-WTXLG{
+        margin-left: 20px;
+    }
+
+    .Links-RedSocial .Logo-WTXLG p, i{
+        font-size: 10.6px;
+        color: var(--Color-MenuMenosFuerte);
+    }
+
 }
 
 @media(max-width: 767px){
@@ -60,7 +110,7 @@
 
     .Encabezado{
         display: flex;
-        justify-content: space-around;
+        justify-content: space-evenly;
         align-items: center;
         background: var(--Color-Logotipo);
         padding-top: 10px;
@@ -73,8 +123,151 @@
     }
 
     .Encabezado .Logotipo i, p{
-        margin-left: 7px;
+        font-size: 8px;
         color: var(--Color-Letras);
+    }
+
+    .Navegation-Little{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .Navegation-Little .Label-Menu{
+        position: relative;
+        cursor: pointer;
+    }
+
+    .Navegation-Little .Label-Menu #Spn-1, #Spn-2, #Spn-3{
+        position: absolute;
+        content: '';
+        background: var(--Color-Letras);
+        top: -7px;
+        width: 20px;
+        height: 4px;
+        border-radius: 75px;
+        transition: all 400ms ease-in-out;
+    }
+
+    #Spn-2{
+        top: -2px;
+    }
+
+    #Spn-3{
+        top: 3px;
+    }
+
+    .Navegation-Little #Btn-Menu:checked ~ .Label-Menu #Spn-1{
+        transform: rotate(140deg);
+        top: -2px;
+    }
+
+    .Navegation-Little #Btn-Menu:checked ~ .Label-Menu #Spn-2{
+        opacity: 0;
+    }
+
+    .Navegation-Little #Btn-Menu:checked ~ .Label-Menu #Spn-3{
+        transform: rotate(-140deg);
+        top: -2px;
+    }
+
+    .Navegation-Little .Label-Navegation{
+        display: none;
+    }
+
+    .Navegation-Little #Btn-Menu:checked ~ .Label-Navegation{
+        display: block;
+        position: absolute;
+        top: 2rem;
+        left: 0px;
+        width: 100%;
+        background: var(--Color-Logotipo);
+    }
+
+    .Label-Navegation ul{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .List-Navegation-Little .Lists-Navegation-Little{
+        display: flex;
+        align-items: center;
+    }
+
+    .List-Navegation-Little .Lists-Navegation-Little a, i{
+        color: var(--Color-Letras);
+        font-size: 8px;
+    }
+
+    #Btn-Menu{
+        display: none;
+    }
+
+    /* Menú - <main> */
+
+    .Menu .Pequeñas-Pruebas{
+        text-align: center;
+    }
+
+    .Menu .Pequeñas-Pruebas p{
+        font-size: 8px;
+    }
+
+    .Links-Lists-Projects{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .Links-Lists-Projects li{
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+
+    .Lists-Projects a{
+        font-size: 8px;
+        color: var(--Color-Enlaces);
+    }
+
+    /* Pie de Página - <footer> */
+
+    #Footer{
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background: var(--Color-Letras);
+    }
+
+    .PieDePagina .CopyRight small{
+        font-size: 8px;
+        color: var(--Color-Logotipo);
+    }
+
+    .PieDePagina .Redes-Sociales{
+        text-align: center;
+    }
+
+    .Redes-Sociales .Invitacion-RedesSociales small{
+        font-size: 8px;
+        color: var(--Color-Logotipo);
+    }
+
+    .Redes-Sociales .Links-RedSocial{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Links-RedSocial .Logo-WTXLG{
+        margin-left: 10px;
+    }
+
+    .Links-RedSocial .Logo-WTXLG p, i{
+        font-size: 8px;
+        color: var(--Color-Logotipo);
     }
 
 }
